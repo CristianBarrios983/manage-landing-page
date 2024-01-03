@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Me permite crear estilos/clases personalizadas en Tailwind, especificando donde queremos que se vayan los cambios */
+@layer components{
+
+    .wrapper{
+        /* El @apply hace que se apliquen esas propiedades al selector */
+        @apply w-[90%] mx-auto overflow-hidden max-w-screen-xl;
+    }
+
+    .button{
+        @apply bg-bright-red text-very-light-gray block w-max py-4 px-12 rounded-full;
+    }
+
+    .footer-area{
+        grid-template-areas: 
+        "form"
+        "navigation"
+        "social-media"
+        "logo"
+        "copy";
+    }
+
+    .footer-area-md{
+        grid-template-areas: 
+        "logo           navigation   form"
+        "social-media   navigation   copy";
+    }
+
+}
